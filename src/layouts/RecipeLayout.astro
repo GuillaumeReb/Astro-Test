@@ -1,0 +1,47 @@
+---
+// Dans layouts/RecipeLayout.astro
+
+type Props = {
+  title: string;
+  description: string;
+  date: string;
+};
+
+const { title, description, date } = Astro.props;
+---
+
+<article class="recipe">
+  <header>
+    <h1>{title}</h1>
+    <p>{date}</p>
+    <p>{description}</p>
+  </header>
+  
+  <section class="recipe-content">
+    <slot /> <!-- Contenu dynamique de la recette -->
+  </section>
+</article>
+
+<style>
+  .recipe {
+    max-width: 800px;
+    margin: auto;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .recipe header h1 {
+    color: #2337ff;
+  }
+
+  .recipe .recipe-content {
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+
+  /* Personnalisation du style pour les recettes */
+  .recipe-content ul {
+    list-style-type: square;
+  }
+</style>
