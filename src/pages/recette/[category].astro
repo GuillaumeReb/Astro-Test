@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+
+// Récupérer toutes les recettes
+const recettes = await getCollection("recette");
+
+// Obtenir toutes les catégories uniques
+const categories = [...new Set(recettes.map((r) => r.data.category))];
+
+// Cette fonction retourne toutes les valeurs possibles pour la route dynamique
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { category }, // "category" est le nom de la variable dynamique dans le fichier
+  }));
+}
+
+// Récupérer la catégorie depuis l'URL via Astro.params
+const { category } = Astro.params; // Utiliser Astro.params pour obtenir le paramètre dynamique
+
+// Filtrer les recettes en fonction de la catégorie
+const filteredRecettes = recettes.filter(
+  (recette) => recette.data.category === category
+);
+---
+
+<main>
+  <h1>
+    Recettes {
+      category
+        ? category.charAt(0).toUpperCase() + category.slice(1)
+        : "Catégorie inconnue"
+    }
+  </h1>
+
+  {
+    filteredRecettes.length > 0 ? (
+      <ul>
+        {filteredRecettes.map((recette) => (
+          <li>
+            <a href={`/recettes/${recette.id}`}>
+              <h2>{recette.data.title}</h2>
+              <img src={recette.data.heroImage} alt={recette.data.title} />
+            </a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>Aucune recette trouvée dans cette catégorie.</p>
+    )
+  }
+</main>
