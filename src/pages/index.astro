@@ -6,9 +6,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+// const posts = (await getCollection('blog')).sort(
+// 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+// );
+const blogs = await getCollection('blog');
+const recettes = await getCollection('recette');
+
+// On ajoute un champ `type` pour les différencier si besoin plus tard
+const allPosts = [...blogs.map((p) => ({ ...p, type: 'blog' })), ...recettes.map((r) => ({ ...r, type: 'recette' }))];
+
+// Tri par date décroissante
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
 ---
 
 <!doctype html>
@@ -93,8 +102,11 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+								<a href={`/${post.type}/${post.id}/`}>
+									{post.data.heroImage && (
+  										<img width={720} height={360} src={post.data.heroImage} alt="" />
+									)}
+									{/* <img width={720} height={360} src={post.data.heroImage} alt="" /> */}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />

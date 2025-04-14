@@ -95,7 +95,9 @@ const posts = (await getCollection('recette')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/recette/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+									{post.data.heroImage && (
+  										<img width={720} height={360} src={post.data.heroImage} alt="" />
+									)}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
