@@ -1,7 +1,7 @@
 ---
 title: "Pad Thai"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "April 9 2025"
+description: "Cuisine Thailandaise"
+pubDate: "April 14 2025"
 heroImage: "/blog-placeholder-3.jpg"
 ---
 
