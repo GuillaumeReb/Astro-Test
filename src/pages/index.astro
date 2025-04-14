@@ -96,6 +96,26 @@ const posts = allPosts.sort(
           font-size: 1.563em;
         }
       }
+
+      .badge {
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: white;
+        background-color: gray;
+      }
+
+      .badge.blog {
+        background-color: #4caf50; /* Vert */
+      }
+
+      .badge.recette {
+        background-color: #ff9800; /* Orange */
+      }
     </style>
   </head>
   <body>
@@ -116,6 +136,12 @@ const posts = allPosts.sort(
                     />
                   )}
                   {/* <img width={720} height={360} src={post.data.heroImage} alt="" /> */}
+
+                  {/* 👇 BADGE ICI */}
+                  <span class={`badge ${post.type}`}>
+                    {post.type === "recette" ? "Recette" : "Article"}
+                  </span>
+
                   <h4 class="title">{post.data.title}</h4>
                   <p class="date">
                     <FormattedDate date={post.data.pubDate} />
