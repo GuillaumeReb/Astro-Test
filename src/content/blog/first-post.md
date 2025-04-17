@@ -1,5 +1,6 @@
 ---
 title: "Premier post"
+category: "Article"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "April 9 2025"
 heroImage: "/blog-placeholder-3.jpg"
