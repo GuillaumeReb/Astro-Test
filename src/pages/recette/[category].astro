@@ -28,7 +28,8 @@ const filteredRecettes = recettesPourFiltrage.filter(
   (recette) => recette.data.category === category
 );
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
+  Astro.props;
 ---
 
 <html lang="en">
@@ -131,7 +132,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                     <img
                       class="hero-image"
                       src={recette.data.heroImage}
-                      alt=""
+                      alt={recette.data.heroImageAlt || "Image de recette"}
                     />
                   )}
                   <h4 class="title">{recette.data.title}</h4>

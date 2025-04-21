@@ -1,9 +1,10 @@
 ---
-title: "Gâteaux bananes"
+title: "Gâteau bananes"
 category: "dessert" # Catégorie de la recette
 description: "Dessert"
 pubDate: "April 21 2025"
 heroImage: "/recettes/cake-banane.jpg"
+heroImageAlt: "Gâteau à la banane bien fondant"
 ---
 
 ingredients:

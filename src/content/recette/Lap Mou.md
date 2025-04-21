@@ -4,6 +4,7 @@ category: "plat" # Catégorie de la recette
 description: "Cuisine Thailandaise"
 pubDate: "April 21 2025"
 heroImage: "/blog-placeholder-3.jpg"
+heroImageAlt: "Lap Mou"
 ---
 
 Lap Mou
