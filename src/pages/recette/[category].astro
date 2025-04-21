@@ -102,6 +102,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           font-size: 1.563em;
         }
       }
+      .hero-image {
+        width: 720px;
+        height: 360px;
+        object-fit: cover;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -123,8 +129,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 <a href={`/recette/${recette.id}/`}>
                   {recette.data.heroImage && (
                     <img
-                      width={720}
-                      height={360}
+                      class="hero-image"
                       src={recette.data.heroImage}
                       alt=""
                     />

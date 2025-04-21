@@ -3,7 +3,7 @@ title: "Gâteaux bananes"
 category: "dessert" # Catégorie de la recette
 description: "Dessert"
 pubDate: "April 21 2025"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "/recettes/cake-banane.jpg"
 ---
 
 ingredients:

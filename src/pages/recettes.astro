@@ -83,6 +83,12 @@ const posts = (await getCollection("recette")).sort(
           font-size: 1.563em;
         }
       }
+      .hero-image {
+        width: 720px;
+        height: 360px;
+        object-fit: cover;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -96,12 +102,7 @@ const posts = (await getCollection("recette")).sort(
               <li>
                 <a href={`/recette/${post.id}/`}>
                   {post.data.heroImage && (
-                    <img
-                      width={720}
-                      height={360}
-                      src={post.data.heroImage}
-                      alt=""
-                    />
+                    <img class="hero-image" src={post.data.heroImage} alt="" />
                   )}
                   <h4 class="title">{post.data.title}</h4>
                   <p class="date">

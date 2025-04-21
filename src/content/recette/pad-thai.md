@@ -3,7 +3,7 @@ title: "Pad Thai"
 category: "plat" # Catégorie de la recette
 description: "Cuisine Thailandaise"
 pubDate: "April 13 2025"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "/recettes/padthai2.jpg"
 ---
 
 PAD THAI Crevettes
