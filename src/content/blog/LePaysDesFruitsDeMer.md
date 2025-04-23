@@ -1,19 +1,19 @@
 ---
-title: "La Thaïlande, le pays des fruits de mer"
+title: "Pourquoi la Thaïlande est le paradis des amateurs de fruits de mer"
 category: "Article"
-description: "La Thaïlande, le pays des fruits de mer"
+description: "Découvrez la Thaïlande à travers ses fruits de mer : crevettes, crustacés et plats typiques de la cuisine thaïlandaise."
 pubDate: "April 23 2025"
 heroImage: "/articles/Pays_fruits_mer.jpg"
-heroImageAlt: "image de fond"
+heroImageAlt: "Des fruits de mer sautés dans deux poêles sur feu vif, typiques de la cuisine de rue en Thaïlande"
 ---
 
 La Thaïlande est reconnue pour ses fruits de mer, ses crevettes et ses crustacés qui sont consommés en grande quantité par la population locale. La Thaïlande est l’un des principaux exportateurs de crevettes à l’échelle mondiale et est également reconnue pour ses produits de la mer. Les Thaïlandais sont connus pour leurs goûts exotiques et leurs préférences pour les crustacés et les crevettes. Dans cet article, nous allons vous présenter la Thaïlande et ses fruits de mer ainsi que les plats que l’on peut réaliser avec ces produits.
 
 La Thaïlande est un paradis pour les consommateurs de fruits de mer. Que vous soyez un amateur de crevettes, de crabes, de moules ou de poissons, la Thaïlande offre toutes sortes de produits de la mer délicieux. Les fruits de mer sont l’un des principaux ingrédients de la cuisine thaïlandaise et sont appréciés par les touristes et les locaux.
 
-## Quelle est la place au niveau mondial de la Thaïlande dans la pêche à la crevette ?
+### Quelle est la place au niveau mondial de la Thaïlande dans la pêche à la crevette ?
 
-La Thaïlande est le plus grand exportateur mondial de crevettes. En effet, elle représente environ 40 % de toutes les crevettes exportées dans le monde.
+La Thaïlande est **le plus grand exportateur mondial de crevettes**. En effet, elle représente environ 40 % de toutes les crevettes exportées dans le monde.
 
 ### Où pêchent ils ?
 
@@ -28,6 +28,8 @@ Les crabes thaïlandais sont également très populaires et sont couramment serv
 ### Pourquoi les Thaïlandais aiment-ils autant les fruits de mer ?
 
 Les Thaïlandais sont très attachés à leur culture et à leur cuisine. Les fruits de mer font partie intégrante de leur culture et de leur cuisine depuis des siècles. Les crevettes sont très appréciées car elles sont très savoureuses et très nutritives. Les crustacés sont également très populaires car ils sont très faciles à préparer et peuvent être consommés crus ou cuits.
+
+![Un plat de crevettes en Thaïlande](/articles/padThaiCrevettes.jpg)
 
 ### Quelle quantité est consommée chaque année ? En Thaïlande vs en France
 
