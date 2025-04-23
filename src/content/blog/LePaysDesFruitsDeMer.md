@@ -11,7 +11,7 @@ La Thaïlande est reconnue pour ses fruits de mer, ses crevettes et ses crustac�
 
 La Thaïlande est un paradis pour les consommateurs de fruits de mer. Que vous soyez un amateur de crevettes, de crabes, de moules ou de poissons, la Thaïlande offre toutes sortes de produits de la mer délicieux. Les fruits de mer sont l’un des principaux ingrédients de la cuisine thaïlandaise et sont appréciés par les touristes et les locaux.
 
-### Quelle est la place au niveau mondial de la Thaïlande dans la pêche à la crevette ?
+## Quelle est la place au niveau mondial de la Thaïlande dans la pêche à la crevette ?
 
 La Thaïlande est le plus grand exportateur mondial de crevettes. En effet, elle représente environ 40 % de toutes les crevettes exportées dans le monde.
 
