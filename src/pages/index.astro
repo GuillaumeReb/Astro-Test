@@ -5,7 +5,11 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
+import { getMultipleWeatherData } from "../lib/weather";
 import HeroImage from "../components/HeroImage.astro";
+
+const villes = ["Bangkok", "Phuket", "Pattaya", "Chiang-Mai"]; // Les villes que vous souhaitez afficher
+const meteoData = await getMultipleWeatherData(villes);
 
 // const posts = (await getCollection('blog')).sort(
 // 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -32,6 +36,71 @@ const posts = allPosts.sort(
     <style>
       main {
         width: 960px;
+      }
+      .weather-section {
+        margin-top: -5em;
+        padding: 1em;
+        text-align: center;
+      }
+
+      .weather-container {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux carrés de passer à la ligne sur les petits écrans */
+        justify-content: center; /* Centre les carrés sur les grands écrans */
+        gap: 1em; /* Espacement entre les carrés */
+        margin-top: 1em;
+      }
+
+      .weather-block {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1.5em;
+        text-align: center;
+        width: calc(25% - 1em); /* Quatre carrés par ligne avec espacement */
+        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+      }
+
+      .weather-block h3 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        color: #333;
+        font-size: 1.2em;
+      }
+
+      .temperature {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #007bff; /* Couleur accent pour la température */
+        margin-bottom: 0.5em;
+      }
+
+      .description {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 0.5em;
+        font-size: 0.9em;
+      }
+
+      .weather-block img {
+        width: 50px;
+        height: 50px;
+        margin-top: 0.5em;
+      }
+
+      /* Responsive design pour les écrans plus petits */
+      @media (max-width: 768px) {
+        .weather-block {
+          width: calc(
+            50% - 1em
+          ); /* Deux carrés par ligne sur les écrans moyens */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .weather-block {
+          width: 100%; /* Un carré par ligne sur les petits écrans */
+        }
       }
       ul {
         display: flex;
@@ -128,6 +197,29 @@ const posts = allPosts.sort(
   <body>
     <Header />
     <main>
+      <section class="weather-section">
+        <h2>Météo Actuelle</h2>
+        <div class="weather-container">
+          {
+            meteoData.map((meteo) => (
+              <div class="weather-block">
+                <h3>{meteo.ville}</h3>
+                <p class="temperature">{meteo.temperature}°C</p>
+                <p class="description">{meteo.description}</p>
+                {meteo.icon && (
+                  <img
+                    src={`https:${meteo.icon}`}
+                    alt={`Icône météo pour ${meteo.description}`}
+                    width="50"
+                    height="50"
+                  />
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
       <section>
         <ul>
           {
