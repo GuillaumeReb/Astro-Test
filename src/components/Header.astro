@@ -20,8 +20,9 @@ const categories = [...new Set(recettes.map((r) => r.data.category))];
     <div class="internal-links">
       <HeaderLink href="/">Accueil</HeaderLink>
       <div class="recipes-menu">
-        <HeaderLink href="/recettes">Recettes</HeaderLink>
-        <ul class="submenu">
+        <HeaderLink href="/recettes" id="recipes-menu-link">Recettes</HeaderLink
+        >
+        <ul class="submenu" id="recipes-submenu">
           {
             categories.map((category) => (
               <li>
@@ -41,11 +42,25 @@ const categories = [...new Set(recettes.map((r) => r.data.category))];
     document.addEventListener("DOMContentLoaded", () => {
       const menuToggle = document.querySelector(".menu-toggle");
       const internalLinks = document.querySelector(".internal-links");
+      const recipesMenuLink = document.getElementById("recipes-menu-link");
+      const recipesSubmenu = document.getElementById("recipes-submenu");
 
       if (menuToggle && internalLinks) {
         menuToggle.addEventListener("click", () => {
           internalLinks.classList.toggle("open");
-          menuToggle.classList.toggle("open"); // Optionnel
+          menuToggle.classList.toggle("open");
+        });
+      }
+
+      if (recipesMenuLink && recipesSubmenu && menuToggle) {
+        recipesMenuLink.addEventListener("click", (event) => {
+          // Vérifie si le menu burger est affiché (donc, on est sur un écran petit)
+          if (window.innerWidth <= 820) {
+            event.preventDefault(); // Empêche la navigation sur mobile
+            recipesSubmenu.classList.toggle("open"); // Ouvre/ferme le sous-menu sur mobile
+          }
+          // Si le menu burger n'est pas affiché (donc, on est sur un écran plus grand),
+          // le comportement par défaut du lien (la navigation) se produira normalement.
         });
       }
     });
