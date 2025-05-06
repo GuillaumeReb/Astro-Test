@@ -23,7 +23,6 @@ Amoureux de chocolat, préparez-vous à fondre de plaisir ! Aujourd'hui, je vous
 1.  **Préchauffez votre four à 180°C (thermostat 6).** Beurrez et farinez un moule rond d'environ 20 cm de diamètre. Cela évitera que le gâteau ne colle et facilitera le démoulage.
 
 2.  Faites fondre ensemble le chocolat et le beurre au bain-marie ou à feu très doux dans une casserole. Remuez régulièrement jusqu'à obtenir un mélange lisse et homogène. Retirez du feu et laissez tiédir légèrement.
-
 3.  Dans un saladier, fouettez les œufs entiers avec le sucre jusqu'à ce que le mélange blanchisse et devienne mousseux. Cette étape est importante pour incorporer de l'air et rendre le gâteau plus léger.
 4.  Incorporez délicatement le mélange chocolat-beurre fondu au mélange œufs-sucre. Mélangez doucement pour ne pas faire retomber les œufs.
 5.  Dans un autre bol, mélangez la farine et la levure chimique. Ajoutez progressivement ce mélange sec à la préparation liquide en mélangeant délicatement à l'aide d'une spatule ou d'un fouet, juste assez pour incorporer la farine. Évitez de trop mélanger, car cela pourrait rendre le gâteau caoutchouteux.
