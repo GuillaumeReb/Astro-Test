@@ -16,3 +16,5 @@ ingredients:
 - 100 g de beurre
 - 80 g de sucre
 - 1 sachet de levure chimique
+
+N'hésitez pas à partager vos réalisations et vos astuces en commentaires ! Et surtout, revenez bientôt pour découvrir de nouvelles recettes aussi gourmandes et faciles à réaliser. À très vite !
